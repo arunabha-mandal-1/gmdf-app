@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/school_main_nav_graph"
+    app:startDestination="@id/schoolHomeFragment">
+
+    <fragment
+        android:id="@+id/schoolHomeFragment"
+        android:name="com.example.gmdf.fragment.SchoolHomeFragment"
+        android:label="fragment_school_home"
+        tools:layout="@layout/fragment_school_home" />
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile"
+        android:title="Your Profile" />
+    <item
+        android:id="@+id/notices"
+        android:title="Notices" />
+    <item
+        android:id="@+id/enquire"
+        android:title="Enquire" />
+    <item
+        android:id="@+id/rateUs"
+        android:title="Rate us" />
+    <item
+        android:id="@+id/shareApp"
+        android:title="Share app" />
+    <item
+        android:id="@+id/developers"
+        android:title="Developers" />
+    <item
+        android:id="@+id/logOut"
+        android:title="Log Out" />
+</menu>

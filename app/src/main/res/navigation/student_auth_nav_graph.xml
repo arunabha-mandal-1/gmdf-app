@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/student_auth_nav_graph"
+    app:startDestination="@id/studentLoginFragment">
+
+    <fragment
+        android:id="@+id/studentLoginFragment"
+        android:name="com.example.gmdf.fragment.StudentLoginFragment"
+        android:label="fragment_student_login"
+        tools:layout="@layout/fragment_student_login" >
+        <action
+            android:id="@+id/action_studentLoginFragment_to_studentRegisterFragment"
+            app:destination="@id/studentRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentRegisterFragment"
+        android:name="com.example.gmdf.fragment.StudentRegisterFragment"
+        android:label="fragment_student_register"
+        tools:layout="@layout/fragment_student_register" >
+        <action
+            android:id="@+id/action_studentRegisterFragment_to_studentLoginFragment"
+            app:destination="@id/studentLoginFragment"
+            app:popUpTo="@id/studentLoginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_studentRegisterFragment_to_studentSignupFragment"
+            app:destination="@id/studentSignupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentSignupFragment"
+        android:name="com.example.gmdf.fragment.StudentSignupFragment"
+        android:label="fragment_student_signup"
+        tools:layout="@layout/fragment_student_signup" >
+        <action
+            android:id="@+id/action_studentSignupFragment_to_studentRegisterFragment"
+            app:destination="@id/studentRegisterFragment"
+            app:popUpTo="@id/studentRegisterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/school_auth_nav_graph"
+    app:startDestination="@id/schoolLoginFragment">
+
+    <fragment
+        android:id="@+id/schoolLoginFragment"
+        android:name="com.example.gmdf.fragment.SchoolLoginFragment"
+        android:label="fragment_school_login"
+        tools:layout="@layout/fragment_school_login" >
+        <action
+            android:id="@+id/action_schoolLoginFragment_to_schoolRegisterFragment"
+            app:destination="@id/schoolRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolRegisterFragment"
+        android:name="com.example.gmdf.fragment.SchoolRegisterFragment"
+        android:label="fragment_school_register"
+        tools:layout="@layout/fragment_school_register" >
+        <action
+            android:id="@+id/action_schoolRegisterFragment_to_schoolSignupFragment"
+            app:destination="@id/schoolSignupFragment" />
+        <action
+            android:id="@+id/action_schoolRegisterFragment_to_schoolLoginFragment"
+            app:destination="@id/schoolLoginFragment"
+            app:popUpTo="@id/schoolLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolSignupFragment"
+        android:name="com.example.gmdf.fragment.SchoolSignupFragment"
+        android:label="fragment_school_signup"
+        tools:layout="@layout/fragment_school_signup" >
+        <action
+            android:id="@+id/action_schoolSignupFragment_to_schoolRegisterFragment"
+            app:destination="@id/schoolRegisterFragment"
+            app:popUpTo="@id/schoolRegisterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
