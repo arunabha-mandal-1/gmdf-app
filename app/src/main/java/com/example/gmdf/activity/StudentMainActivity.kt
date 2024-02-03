@@ -7,10 +7,13 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.navigation.findNavController
 import com.example.gmdf.R
 import com.example.gmdf.databinding.ActivitySchoolMainBinding
 import com.example.gmdf.databinding.ActivityStartBinding
 import com.example.gmdf.databinding.ActivityStudentMainBinding
+import com.example.gmdf.fragment.StudentHomeFragment
+import com.example.gmdf.fragment.StudentProfileFragment
 import com.google.android.material.navigation.NavigationView
 
 class StudentMainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -33,7 +36,8 @@ class StudentMainActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.profile -> {
-                Toast.makeText(this, "Open Profile!", Toast.LENGTH_SHORT).show()
+                findNavController(R.id.fragmentContainerView2).navigate(R.id.action_studentHomeFragment_to_studentProfileFragment)
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
             }
 
             R.id.notices -> {

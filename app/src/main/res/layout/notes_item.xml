@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="4dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+
+            <TextView
+                android:id="@+id/tvNoteTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Abcd Notes from chapter II"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ivDownload"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNoteTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvNoteTitle"
+                app:srcCompat="@drawable/baseline_arrow_downward_24" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/tvNoteTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvNoteTitle"
+                app:srcCompat="@drawable/baseline_person_24" />
+
+            <TextView
+                android:id="@+id/tvTeacher"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sumit Gupta"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTeacher"
+                app:layout_constraintStart_toEndOf="@+id/tvTeacher"
+                app:layout_constraintTop_toTopOf="@+id/tvTeacher"
+                app:srcCompat="@drawable/baseline_assignment_24" />
+
+            <TextView
+                android:id="@+id/tvSubject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Psychology"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                app:layout_constraintEnd_toStartOf="@+id/tvDate"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="10.10.21"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSubject"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSubject" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

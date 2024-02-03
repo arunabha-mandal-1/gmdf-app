@@ -9,5 +9,22 @@
         android:id="@+id/studentHomeFragment"
         android:name="com.example.gmdf.fragment.StudentHomeFragment"
         android:label="fragment_student_home"
-        tools:layout="@layout/fragment_student_home" />
+        tools:layout="@layout/fragment_student_home" >
+        <action
+            android:id="@+id/action_studentHomeFragment_to_studentProfileFragment"
+            app:destination="@id/studentProfileFragment" />
+        <action
+            android:id="@+id/action_studentHomeFragment_to_studentNotesFragment"
+            app:destination="@id/studentNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentProfileFragment"
+        android:name="com.example.gmdf.fragment.StudentProfileFragment"
+        android:label="fragment_student_profile"
+        tools:layout="@layout/fragment_student_profile" />
+    <fragment
+        android:id="@+id/studentNotesFragment"
+        android:name="com.example.gmdf.fragment.StudentNotesFragment"
+        android:label="fragment_student_notes"
+        tools:layout="@layout/fragment_student_notes" />
 </navigation>

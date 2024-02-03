@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.view.GravityCompat
+import androidx.navigation.findNavController
 import com.example.gmdf.R
 import com.example.gmdf.databinding.ActivitySchoolMainBinding
 import com.google.android.material.navigation.NavigationView
@@ -28,7 +29,8 @@ class SchoolMainActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.profile -> {
-                Toast.makeText(this, "Open Profile!", Toast.LENGTH_SHORT).show()
+                findNavController(R.id.fragmentContainerView2).navigate(R.id.action_schoolHomeFragment_to_schoolProfileFragment)
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
             }
 
             R.id.notices -> {

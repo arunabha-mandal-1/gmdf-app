@@ -9,5 +9,14 @@
         android:id="@+id/schoolHomeFragment"
         android:name="com.example.gmdf.fragment.SchoolHomeFragment"
         android:label="fragment_school_home"
-        tools:layout="@layout/fragment_school_home" />
+        tools:layout="@layout/fragment_school_home" >
+        <action
+            android:id="@+id/action_schoolHomeFragment_to_schoolProfileFragment"
+            app:destination="@id/schoolProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolProfileFragment"
+        android:name="com.example.gmdf.fragment.SchoolProfileFragment"
+        android:label="fragment_school_profile"
+        tools:layout="@layout/fragment_school_profile" />
 </navigation>
