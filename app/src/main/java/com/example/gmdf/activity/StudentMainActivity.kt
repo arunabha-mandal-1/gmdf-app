@@ -36,6 +36,7 @@ class StudentMainActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.profile -> {
+                // bug here
                 findNavController(R.id.fragmentContainerView2).navigate(R.id.action_studentHomeFragment_to_studentProfileFragment)
                 binding.drawerLayout.closeDrawer(GravityCompat.START)
             }
